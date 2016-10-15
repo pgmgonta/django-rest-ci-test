@@ -13,3 +13,4 @@ media
 cover/
 coverage.xml
 nosetests.xml
+reports/
