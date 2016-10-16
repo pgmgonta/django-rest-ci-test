@@ -3,7 +3,6 @@
 from example.settings import *
 import os
 
-#TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 TEST_RUNNER = 'django_jenkins.runner.CITestSuiteRunner'
 
 COVERAGE_REPORT_HTML_OUTPUT_DIR = '.cover'
@@ -15,8 +14,9 @@ INSTALLED_APPS += (
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pylint',
     'django_jenkins.tasks.run_pep8',
- #   'django_jenkins.tasks.run_pyflakes',
- #   'django_jenkins.tasks.run_flake8',
+    'django_jenkins.tasks.run_pyflakes',
+    'django_jenkins.tasks.run_flake8',
+    #'django_jenkins.tasks.run_sloccount',
 )
 PROJECT_APPS = (
     'todo',
